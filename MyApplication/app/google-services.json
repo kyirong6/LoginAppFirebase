@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "449581821485",
+    "firebase_url": "https://loginapp-33caf.firebaseio.com",
+    "project_id": "loginapp-33caf",
+    "storage_bucket": "loginapp-33caf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449581821485:android:8c23529bb8dbf740",
+        "android_client_info": {
+          "package_name": "choendenkyirong.loginapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449581821485-50kbiq5gh8olj1grd83tmn2lc20g5lej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAstwc2sjGQF9yqPJlqjyjdJNPwwS01Ejs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
