@@ -22,6 +22,7 @@ public class SignupActivity extends AppCompatActivity {
     private Button btnSignIn, btnSignUp, btnResetPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
+    private SHAEHash hash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class SignupActivity extends AppCompatActivity {
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
-
+        hash = new SHAEHash();
         btnSignIn = (Button) findViewById(R.id.sign_in_button);
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
         inputEmail = (EditText) findViewById(R.id.email);
@@ -57,7 +58,11 @@ public class SignupActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String email = inputEmail.getText().toString().trim();
-                String password = inputPassword.getText().toString().trim();
+                // Send password through a hash to be more secure. (No salt)
+                System.out.println(inputPassword.getText().toString().trim());
+                String password = hash.get_SHA_1_SecurePassword(inputPassword.getText().toString().trim());
+                System.out.println(password);
+
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
